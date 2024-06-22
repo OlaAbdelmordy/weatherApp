@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+<!-- -----------------------Open Sans font----------------------------------- -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<!-- ---------------------------------------------------------- -->
+
+      <!-- ----bootstrap file ------- -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+           
+      <!--   fontawesome file -->
+      <link rel="stylesheet" href="./css/all.min.css">
+      
+          <!-- ----css file ------- -->
+          <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg nav_css "> 
+        <div class="container py-4">
+            <img src="weatherApp_img/1.png" alt="weather_logo" class="me-2">
+          <a class="navbar-brand" href="#">Weather</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-2 ms-auto mb-lg-0  w-50">
+              <li class="nav-item px-3 nav_border ">
+                <a class="nav-link active  " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Live</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+             
+           
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="pt-5 cards_container">
+        <div class="search mb-5">
+             <div class="container py-4">
+
+                <div class="search_div_css mb-3">
+              <input type="text" value="" name="" placeholder="Find Your Location..." id="search_id" class="form-control
+                     border-0 input_css py-3 px-4">
+
+                    <button class=" position-absolute px-4 find_btn">Find</button>
+
+                </div>
+                
+                <div class="mt-5">
+                  <div class="cards_parent mt-4">
+                    <div class="first_card">
+                      <div class="f-title d-flex justify-content-between align-items-center p-1">
+    <span class="text-light px-2 py-1" id="weekDay_id"></span>
+    <span class="text-light pe-1" id="dayNum_id"></span>
+                    </div>
+
+                    <div class="p-2 first_card_content ">
+                      
+                      <span class="text-light p-2" id="cityName_id"></span>
+                      <h2 class="text-light ps-1 pe-3 temp_num_css"><span class="text-light temp_num_css" id="todayTemp_id"></span>°C</h2>
+                    
+                        <img class="moon_icon ps-4 " id="currentIcon_id" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""></img>
+                     
+                      <span class="ps-2 mt-3" id="currentCondition_id">clear</span>
+                      <div class="card_footer">
+                        <ul>
+                          <li class="f_li">
+                            <img src="weatherApp_img/3.png">
+                            <span> <span id="currentHum_id"></span>%</span>
+                          </li>
+                          <li>
+                            <img src="weatherApp_img/4.png">
+                            <span><span id="currWind_id"></span>
+                              km/h
+                            </span>
+                          </li>
+                          <li>
+                            <img src="weatherApp_img/5.png">
+                            <span id="currWindDirection_id">East
+                            </span>
+                          </li>
+                        </ul>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                    <div class="second_card">
+                      <div class="s-title d-flex align-items-center p-1">
+                        <span class="text-light py-1 " id="tomorrowName_id"></span>
+                                        </div>
+                                    <div class="second_card_content">
+                                         <img src="" id="secondDayicon_id"  alt="">
+                                         <span class="text-light  secondTemp_max_css">
+                                          <span class="text-light secondTemp_max_css" id="secondDayMaxTemp_id"></span>°C</span>
+
+                                          <span class="secondTemp_min_css mt-1">
+                                            <span class=" secondTemp_min_css" id="secondDayMinTemp_id"></span>°</span>
+
+                                          <span class="text-light pt-2 bllue" id="secondCardCondition_id">sun</span>
+                                    </div>
+                    </div>
+
+                    <div class="third_card">
+                      <div class="s-title d-flex align-items-center p-1">
+                        <span class="text-light py-1 " id="AtomorrowName_id"></span>
+                                        </div>
+                                    <div class="second_card_content">
+                                         <img src="" id="thirdDayicon_id"  alt="">
+                                         <span class="text-light  secondTemp_max_css">
+                                          <span class="text-light secondTemp_max_css" id="thirdDayMaxTemp_id"></span>°C</span>
+
+                                          <span class="secondTemp_min_css mt-1">
+                                            <span class=" secondTemp_min_css" id="thirdDayMinTemp_id"></span>°</span>
+
+                                          <span class="text-light pt-2 bllue" id="thirdCardCondition_id">sun</span>
+                                    </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+      </div>
+
+
+<footer class="footer_css"> 
+    <div class="container py-5">
+        <div class="row py-4 items-center">
+            <div class="col-md-8">
+               
+              <div class="search_div_css mb-3">
+                <input type="text" value="" name="" placeholder="Enter Your Email to subscribe..." id="search_id" class="form-control 
+                      rounded-top-pill rounded-bottom-pill border-0 input_css py-3 px-4">
+  
+                      <button class=" position-absolute px-2 find_btn">Subscribe</button>
+  
+                     
+                  </div>
+                  <div>
+                    <p class="text-light ms-3 mt-2">
+                      Copyright 2014 Company name. Designed by Themezy. All rights reserved
+                    </p>
+                  </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div>
+                <div class=" d-flex justify-content-center  ">
+                  <ul class="d-flex  flex-nowrap   justify-content-center ">
+                      <li class="mx-1"><a class=" " href="#"><i class=" fa-brands fa-facebook-f px-2   rounded-circle d-flex justify-content-center align-items-center flex-column home_social"></i></a></li>
+                      <li class="mx-1"><a class=" " href="#"><i class="  fa-brands fa-twitter px-2  rounded-circle d-flex justify-content-center align-items-center flex-column home_social"></i></a></li>
+                      <li class="mx-1"><a class="" href="#"><i class=" fa-brands fa-linkedin-in px-2  rounded-circle d-flex justify-content-center align-items-center flex-column home_social"></i></a></li>
+                      <li class="mx-1"><a class=" " href="#"><i class=" fa-brands fa-behance px-2  rounded-circle d-flex justify-content-center align-items-center flex-column home_social"></i></a></li>
+                      
+                  </ul>
+              </div>
+              </div>
+          </div>
+        </div>
+
+    </div>
+</footer>
+    
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
